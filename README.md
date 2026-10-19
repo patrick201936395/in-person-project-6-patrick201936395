@@ -339,17 +339,6 @@ npm run dev
 3. Grading is complete/incomplete: a pushed repository that runs with `npm run dev`, shows the styled portfolio split into components, and whose mobile menu and project filter are driven by state (Parts 1 to 3) earns complete.
 4. This is an individual project. No deployment is required.
 
-### Project Checklist
-
-Before submitting:
-- [x] `npm run dev` runs and the console is clean on load
-- [x] Separate files under `src/components/` for Navbar, Hero, About, Skills, Projects, Contact and Footer; `App.jsx` owns the projects array and renders the seven components
-- [x] Navbar's mobile menu is driven by `useState`, with no `classList` or `querySelector`
-- [x] Projects stores `activeFilter` in state and derives the filtered list (not stored in state); every mapped card has a `key`
-- [x] Contact's inputs are controlled (`value` plus `onChange`), state is updated immutably, errors show on blur and on submit, a success message shows after a valid submit
-- [x] Skills renders from an array with `.map()`
-- [x] Tier 1: the derived project count updates with every filter
-
 ### Reflection Questions
 
 1. How is managing the menu with state different from toggling a class on the DOM, and which was easier to reason about?
