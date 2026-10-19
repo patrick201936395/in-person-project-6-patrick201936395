@@ -342,13 +342,13 @@ npm run dev
 ### Project Checklist
 
 Before submitting:
-- [ ] `npm run dev` runs and the console is clean on load
-- [ ] Separate files under `src/components/` for Navbar, Hero, About, Skills, Projects, Contact and Footer; `App.jsx` only imports and renders them
-- [ ] Navbar's mobile menu is driven by `useState`, with no `classList` or `querySelector`
-- [ ] Projects stores `activeFilter` in state and derives the filtered list (not stored in state); every mapped card has a `key`
-- [ ] Contact's inputs are controlled (`value` plus `onChange`), state is updated immutably, errors show on blur and on submit, a success message shows after a valid submit
-- [ ] Skills renders from an array with `.map()`
-- [ ] Optional: Tier 1 of the Extension Activities (the derived count), then Tier 2 or 3
+- [x] `npm run dev` runs and the console is clean on load
+- [x] Separate files under `src/components/` for Navbar, Hero, About, Skills, Projects, Contact and Footer; `App.jsx` owns the projects array and renders the seven components
+- [x] Navbar's mobile menu is driven by `useState`, with no `classList` or `querySelector`
+- [x] Projects stores `activeFilter` in state and derives the filtered list (not stored in state); every mapped card has a `key`
+- [x] Contact's inputs are controlled (`value` plus `onChange`), state is updated immutably, errors show on blur and on submit, a success message shows after a valid submit
+- [x] Skills renders from an array with `.map()`
+- [x] Tier 1: the derived project count updates with every filter
 
 ### Reflection Questions
 

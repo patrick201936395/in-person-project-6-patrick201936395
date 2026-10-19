@@ -1,5 +1,3 @@
-/* Week 8 portfolio styles - copy from week 7 or use these complete styles */
-
 * {
     margin: 0;
     padding: 0;
@@ -40,6 +38,14 @@ body {
     padding: var(--spacing-xl) 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
 .section-alt {
     background: var(--bg-light);
 }
@@ -67,7 +73,6 @@ a:hover {
     color: var(--secondary-color);
 }
 
-/* Navigation - Week 8: use state for mobile menu */
 #navbar {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     padding: var(--spacing-sm) var(--spacing-md);
@@ -89,7 +94,7 @@ a:hover {
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-xs);
 }
 
 .nav-link {
@@ -106,6 +111,9 @@ a:hover {
 }
 
 .nav-toggle {
+    padding: 4px;
+    border: none;
+    background: transparent;
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -119,7 +127,6 @@ a:hover {
     transition: 0.3s;
 }
 
-/* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: var(--white);
@@ -157,7 +164,6 @@ a:hover {
     justify-content: center;
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     padding: 0.75rem 2rem;
@@ -190,7 +196,6 @@ a:hover {
     color: var(--primary-color);
 }
 
-/* About Section */
 .about-grid {
     margin-top: var(--spacing-md);
     display: grid;
@@ -228,7 +233,6 @@ a:hover {
     color: white;
 }
 
-/* Skills Section */
 .skills-grid {
     margin-top: var(--spacing-md);
     display: grid;
@@ -285,7 +289,6 @@ a:hover {
     color: var(--text-light);
 }
 
-/* Projects Section - Week 8: use state for filtering */
 .filter-buttons {
     display: flex;
     justify-content: center;
@@ -345,6 +348,13 @@ a:hover {
     position: relative;
     overflow: hidden;
     height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    color: var(--white);
+    font-size: 1.75rem;
+    text-align: center;
 }
 
 .project-image img {
@@ -404,6 +414,8 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     margin-bottom: var(--spacing-sm);
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
 }
 
 .project-title {
@@ -440,7 +452,6 @@ a:hover {
     margin-bottom: var(--spacing-xs);
 }
 
-/* Contact Form - Week 8: use state for form data and validation */
 .contact-content {
     max-width: 800px;
     margin: 0 auto;
@@ -492,7 +503,6 @@ a:hover {
     resize: vertical;
 }
 
-/* Form Validation - Week 8 state-based validation */
 .error-message {
     color: #dc2626;
     font-size: 0.875rem;
@@ -519,7 +529,11 @@ a:hover {
     font-weight: 500;
 }
 
-/* Footer */
+.contact-form .btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
 .footer {
     background: var(--bg-dark);
     color: var(--white);
@@ -548,7 +562,6 @@ a:hover {
     color: var(--primary-color);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     h1 { font-size: 2rem; }
     h2 { font-size: 1.75rem; }
@@ -562,9 +575,13 @@ a:hover {
 
     .nav-menu {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
         flex-direction: column;
-        margin-top: var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     }
 
     .nav-menu.active {
